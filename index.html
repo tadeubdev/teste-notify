@@ -1,3 +1,4 @@
+<button id="btnNotify">notify</button>
 
 <script>
   function askNotificationPermission() {
@@ -31,8 +32,10 @@
     return true;
   }
   
-  const notification = new Notification('To do list', { body: 'teste 12346' });
+  // const notification = new Notification('To do list', { body: 'teste 12346' });
+  
+  document.querySelector('#btnNotify').addEventListener(() => {
+    askNotificationPermission();
+    new Notification('To do list', { body: 'teste 12346' })
+  });
 </script>
-
-
-<button onclick="askNotificationPermission">notify</button>
