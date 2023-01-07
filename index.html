@@ -34,7 +34,7 @@
   
   // const notification = new Notification('To do list', { body: 'teste 12346' });
   
-  document.querySelector('#btnNotify').addEventListener(() => {
+  document.querySelector('#btnNotify').addEventListener('click', () => {
     askNotificationPermission();
     new Notification('To do list', { body: 'teste 12346' })
   });
